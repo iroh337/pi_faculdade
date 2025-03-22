@@ -40,10 +40,8 @@ body {
     font-weight: 600;
 }
 
-#points{
-    
-    font-size: 120px;
-    font-weight: 100;
+#life{
+    font-size: 100px;
     margin: 0;
     padding: 0;
 }

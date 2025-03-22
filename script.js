@@ -1,4 +1,4 @@
-let c = 0;
+let c = 3;
 const perguntas = [
     { imagem: "/images/cachorro.png", palavra: "Ca__orro", opcoes: ["ch", "x", "sh", "cl"], correta: 0 },
     { imagem: "/images/gato.png", palavra: "Ga__", opcoes: ["te", "to", "go", "ti"], correta: 1 },
@@ -21,26 +21,29 @@ function carregarPergunta() {
 function verificarResposta(indice) {
     let correta = perguntas[indiceAtual].correta;
     let feedback = document.getElementById("feedback");
-    let contador = document.getElementById("points");
+    let vidas = document.getElementById("life");
     
-
+    
     feedback.innerText = (indice === correta) ? "Correto!" : "Errado!";
     feedback.style.color = (indice === correta) ? "green" : "red";
-    if(indice === correta){
-        c+=1;
-        contador.innerText = `${c} pts`
-        // alert(`${c}`)
-    }else if(indice != correta){
-        c-=1;
-        contador.innerText = `${c} pts`
-        //    alert(`${c}`)
+    if(indice != correta){
+        c--;
+        if(c == 2){
+            vidas.innerText = "♥♥";
+        }
+        if(c==1){
+            vidas.innerText = "♥";
+    
+        }
+        if(c == 0){
+            vidas.innerText = ""
+            setTimeout(()=>{
+                alert("Voce perdeu!");
+                location.reload()
+            }, 1000)
     }
-    if(c == 5){
-        alert("Você venceu!");
-        c = 0;
-        contador.innerText = `${c} pts`
-        location.reload()
 
+    
     }
     setTimeout(() => {
         indiceAtual = (indiceAtual + 1) % perguntas.length;
