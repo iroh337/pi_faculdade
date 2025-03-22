@@ -1,10 +1,10 @@
 let c = 0;
 const perguntas = [
-    { imagem: "cachorro.png", palavra: "Ca__orro", opcoes: ["ch", "x", "sh", "cl"], correta: 0 },
-    { imagem: "gato.png", palavra: "Ga__", opcoes: ["te", "to", "go", "ti"], correta: 1 },
-    { imagem: "cavalo.png", palavra: "Ca__lo", opcoes: ["ce", "ju", "ca", "va"], correta: 3 },
-    { imagem: "coelho.png", palavra: "C__lho", opcoes: ["eo", "ou", "oe", "oi"], correta: 2 },
-    { imagem: "macaco.png", palavra: "Ma__co", opcoes: ["ca", "gi", "ni", "co"], correta: 0 },
+    { imagem: "/images/cachorro.png", palavra: "Ca__orro", opcoes: ["ch", "x", "sh", "cl"], correta: 0 },
+    { imagem: "/images/gato.png", palavra: "Ga__", opcoes: ["te", "to", "go", "ti"], correta: 1 },
+    { imagem: "/images/cavalo.png", palavra: "Ca__lo", opcoes: ["ce", "ju", "ca", "va"], correta: 3 },
+    { imagem: "/images/coelho.png", palavra: "C__lho", opcoes: ["eo", "ou", "oe", "oi"], correta: 2 },
+    { imagem: "/images/macaco.png", palavra: "Ma__co", opcoes: ["ca", "gi", "ni", "co"], correta: 0 },
 ];
 
 let indiceAtual = 0;
@@ -39,6 +39,7 @@ function verificarResposta(indice) {
         alert("Você venceu!");
         c = 0;
         contador.innerText = `${c} pts`
+        location.reload()
 
     }
     setTimeout(() => {

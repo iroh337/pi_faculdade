@@ -4,8 +4,29 @@ body {
     font-family: "Poppins", sans-serif;
     text-align: center; 
 }
+.opcoes{
+    /* display: flex; */
+    margin: auto;
+    width: 100%;
+    
+}
+
 .opcoes button {
+    width: 100px;
+    height: 50px;
+    border: 0;
+    border-radius: 10px;
+    background-color: rgb(117, 117, 117);
     margin: 5px; padding: 10px;
+    color: white;
+    font-size: larger;
+    
+    
+}
+
+.opcoes button:hover{
+    background-color: rgb(170, 169, 169);
+
 }
 
 #imagem{
@@ -13,6 +34,16 @@ body {
     width: 400px;
 }
 
-#fedback{
+#feedback{
     color: green;
+    font-size: larger;
+    font-weight: 600;
+}
+
+#points{
+    
+    font-size: 120px;
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
 }
