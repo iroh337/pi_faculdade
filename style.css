@@ -35,7 +35,7 @@ body {
 
 #imagem {
     height: auto;
-    width: 90%;
+    width: 500px;
     max-width: 400px;
     margin-top: 20px;
 }
@@ -59,6 +59,11 @@ body {
         width: 100px;
         height: 45px;
         font-size: medium;
+    }
+
+    #imagem{
+        width: 300px;
+        height: 220px;
     }
 
     #life {
