@@ -1,4 +1,3 @@
-let c = 3;
 const perguntas = [
     { imagem: "/images/cachorro.png", palavra: "Ca__orro", opcoes: ["ch", "x", "sh", "cl"], correta: 0 },
     { imagem: "/images/gato.png", palavra: "Ga__", opcoes: ["te", "to", "go", "ti"], correta: 1 },
@@ -7,6 +6,7 @@ const perguntas = [
     { imagem: "/images/macaco.png", palavra: "Ma__co", opcoes: ["ca", "gi", "ni", "co"], correta: 0 },
 ];
 
+let c = 3;
 let indiceAtual = 0;
 
 function carregarPergunta() {
