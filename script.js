@@ -4,10 +4,11 @@ const perguntas = [
     { imagem: "/images/cavalo.png", palavra: "Ca__lo", opcoes: ["ce", "ju", "ca", "va"], correta: 3 },
     { imagem: "/images/coelho.png", palavra: "C__lho", opcoes: ["eo", "ou", "oe", "oi"], correta: 2 },
     { imagem: "/images/macaco.png", palavra: "Ma__co", opcoes: ["ca", "gi", "ni", "co"], correta: 0 },
+    { imagem: "/images/bola.png", palavra: "Bo__", opcoes: ["lo", "la", "ba", "bo"], correta: 1 },
 ];
 
-let c = 3;
-let indiceAtual = 0;
+let c = 3; // contador de pontos
+let indiceAtual = 0; // 
 
 function carregarPergunta() {
     let p = perguntas[indiceAtual];
