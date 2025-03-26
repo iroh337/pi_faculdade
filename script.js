@@ -5,6 +5,7 @@ const perguntas = [
     { imagem: "/images/coelho.png", palavra: "C__lho", opcoes: ["eo", "ou", "oe", "oi"], correta: 2 },
     { imagem: "/images/macaco.png", palavra: "Ma__co", opcoes: ["ca", "gi", "ni", "co"], correta: 0 },
     { imagem: "/images/bola.png", palavra: "Bo__", opcoes: ["lo", "la", "ba", "bo"], correta: 1 },
+    { imagem: "/images/carro.png", palavra: "Car__", opcoes: ["ru", "re", "de", "ro"], correta: 3 },
 ];
 
 let c = 3; // contador de pontos
