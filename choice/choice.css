@@ -9,7 +9,7 @@ body{
 
 }
 section{
-    min-width: 360px;
+    min-width: 330px;
     background-color: aliceblue;
     padding: 20px;
     border-radius: 20px;
@@ -35,3 +35,4 @@ a{
 a:hover{
     color: rgb(33, 42, 51);
 }
+
