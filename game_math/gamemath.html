@@ -1,12 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo de Matematica</title>
+    <title>Jogo da Matemática</title>
     <link rel="stylesheet" href="gamemath.css">
+        
+    </style>
 </head>
 <body>
-    Jogo de Matematica!
+
+    <h1>Quanto é: </h1>
+    <h2 id="conta"></h2>
+
+    <div class="opcoes">
+        <button onclick="verificarResposta(0)"></button>
+        <button onclick="verificarResposta(1)"></button>
+        <button onclick="verificarResposta(2)"></button>
+        <button onclick="verificarResposta(3)"></button>
+    </div>
+    <p id="life"> ♥♥♥</p>
+    <p id="feedback"></p>
+
+    <script src="gamemath.js"></script>
+
 </body>
 </html>
