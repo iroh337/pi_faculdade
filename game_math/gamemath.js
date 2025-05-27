@@ -31,6 +31,7 @@ function verificarResposta(indice) {
         c--;
         if(c == 2){
             vidas.innerText = "♥♥";
+
         }
         if(c==1){
             vidas.innerText = "♥";

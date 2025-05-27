@@ -6,6 +6,15 @@ body {
     margin: 0;
     padding: 0;
 }
+    
+#container{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+    width: 35%;
+    height: 40%;
+    margin: auto;
+    border-radius: 50px;
+    
+}
 
 .opcoes {
     display: flex;
@@ -22,15 +31,15 @@ body {
     height: 50px;
     border: 0;
     border-radius: 10px;
-    background-color: rgb(117, 117, 117);
-    color: white;
+    background-color: rgb(176, 245, 175);
+    color: rgb(9, 88, 9);
     font-size: larger;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
 }
 
 .opcoes button:hover {
-    background-color: rgb(170, 169, 169);
+    background-color: rgb(155, 209, 160);
 }
 
 #conta{
@@ -62,6 +71,10 @@ body {
 
 
 @media (max-width: 550px) {
+    #container{
+        width: 300px;
+    }
+
     .opcoes button {
         width: 100px;
         height: 45px;
