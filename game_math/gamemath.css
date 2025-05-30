@@ -1,112 +1,132 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 body {
     font-family: "Poppins", sans-serif;
     text-align: center; 
     margin: 0;
     padding: 0;
-}
-    
-#container{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
-    width: 35%;
-    height: 40%;
-    margin: auto;
-    border-radius: 50px;
     
 }
 
-.opcoes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px; 
+#container {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 
+                0 6px 20px rgba(0, 0, 0, 0.19);
+    width: 90%;
+    max-width: 500px;
     margin: 20px auto;
-    width: 90%; 
-    max-width: 600px; 
+    border-radius: 30px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .opcoes button {
-    width: 120px;
+    flex: 1 1 100px;
+    min-width: 100px;
     height: 50px;
-    border: 0;
-    border-radius: 10px;
-    background-color: rgb(176, 245, 175);
-    color: rgb(9, 88, 9);
-    font-size: larger;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #b0f5af, #78d678);
+    color: #065f06;
+    font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.opcoes button::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
 .opcoes button:hover {
-    background-color: rgb(155, 209, 160);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
 }
 
-#conta{
-    font-size: 100px;
+.opcoes button:hover::after {
+    opacity: 1;
+}
+
+.opcoes button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#conta {
+    font-size: 80px;
     font-weight: 400;
-    margin: 0;
-    padding: 0  ;
+    margin: 10px 0;
 }
 
 #imagem {
-    height: 300px;
-    width: 500px;
+    width: 100%;
     max-width: 400px;
+    height: auto;
     margin-top: 20px;
+    border-radius: 10px;
 }
 
 #feedback {
     color: green;
-    font-size: larger;
+    font-size: 1.2rem;
     font-weight: 600;
 }
 
 #life {
-    font-size: 80px;
-    margin: 0;
-    padding: 0;
+    font-size: 3rem;
+    margin: 10px 0;
     color: red;
 }
 
 
-@media (max-width: 550px) {
-    #container{
-        width: 300px;
+@media (max-width: 768px) {
+    #conta {
+        font-size: 3rem;
     }
 
     .opcoes button {
-        width: 100px;
-        height: 45px;
-        font-size: medium;
-    }
-
-    #palavra-incompleta{
-        font-size: 70px;
-        font-weight: 400;
-        margin: 0;
-        padding: 0  ;
-    }
-
-    #imagem{
-        width: 300px;
-        height: 250px;
+        min-width: 80px;
+        height: 40px;
+        font-size: 0.9rem;
     }
 
     #life {
-        font-size: 60px;
+        font-size: 2.5rem;
     }
 }
 
-@media (max-width: 375px) {
-    #palavra-incompleta{
-        font-size: 2    0px;
-        font-weight: 400;
-        margin: 0;
-        padding: 0  ;
+
+@media (max-width: 550px) {
+    #conta {
+        font-size: 5rem;
     }
-    #imagem{
-        width: 200px;
-        height: 150px;
+
+    #imagem {
+        max-width: 300px;
+    }
+}
+
+
+@media (max-width: 375px) {
+    #conta {
+        font-size: 5rem;
+    }
+
+    #imagem {
+        max-width: 200px;
+    }
+
+    .opcoes button {
+        min-width: 70px;
+        margin: 2px;
+        height: 35px;
+        font-size: 0.8rem;
     }
 }
