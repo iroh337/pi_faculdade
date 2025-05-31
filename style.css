@@ -3,14 +3,10 @@
 
 body{
     font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #fff4f4, #acb6e5);
     text-align: center; 
-    margin: 0;
-    padding: 0;
-}
-
-
     
-
+}
 
 #button{
     position: absolute;
