@@ -39,8 +39,9 @@ function verificarResposta(indice) {
         }
         if(c == 0){
             vidas.innerText = ""
+            feedback.innerText = "Você perdeu!"
+            feedback.style.fontSize = "30px"
             setTimeout(()=>{
-                alert("Voce perdeu!");
                 location.reload()
             }, 1000)
     }
@@ -50,7 +51,7 @@ function verificarResposta(indice) {
     setTimeout(() => {
         indiceAtual = (indiceAtual + 1) % perguntas.length;
         carregarPergunta();
-        feedback.innerText = ""
+        feedback.innerText = "";
     }, 1000);
     
 }
