@@ -2,13 +2,16 @@
 html, body {
     margin: 0;
     padding: 0;
-    width: 100%;
-    min-height: 100vh;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    width: 100vw;      /* Exatamente 100% da largura da viewport */
+    height: 100vh;     /* Exatamente 100% da altura da viewport */
+    overflow: hidden;  /* Remove barras de rolagem */
+}
+
+
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Mantém a fonte do código 1 */
     background: linear-gradient(to bottom right, #ffe0b2, #ffccbc);
     text-align: center;
-    padding: 20px;
-    box-sizing: border-box;
 }
 
 h1 {
