@@ -3,7 +3,7 @@ body {
     padding: 0;
     font-family: 'Comic Sans MS', cursive, sans-serif;
     background: linear-gradient(to bottom left, #a1c4fd, #c2e9fb);
-    height: 100vh;
+    height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: center;

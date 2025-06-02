@@ -43,17 +43,15 @@ function verificarResposta(indice) {
             setTimeout(()=>{
                 location.reload();
             }, 3000)
-        }else{
-            setTimeout(() => {
-                indiceAtual = (indiceAtual + 1) % perguntas.length;
-                carregarPergunta();
-                feedback.innerText = ""
-            }, 1000);
         }
 
     
     }
-    
+    setTimeout(() => {
+        indiceAtual = (indiceAtual + 1) % perguntas.length;
+        carregarPergunta();
+        feedback.innerText = ""
+    }, 1000);
     
 }
 
