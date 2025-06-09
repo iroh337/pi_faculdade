@@ -73,7 +73,7 @@ function verificarResposta(indice) { //funcao de verificacao de resposta
         indiceAtual = (indiceAtual + 1) % perguntas.length;
         carregarPergunta();
         feedback.innerText = "";
-    }, 1500); // assim possibilitando o usuario a ver o feedback
+    }, 1000); // assim possibilitando o usuario a ver o feedback
     
 }
 
