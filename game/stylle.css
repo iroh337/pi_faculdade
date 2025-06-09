@@ -3,9 +3,9 @@
 html, body {
     margin: 0;
     padding: 0;
-    width: 100vw;      /* Exatamente 100% da largura da viewport */
-    height: 100vh;     /* Exatamente 100% da altura da viewport */
-    overflow: hidden;  /* Remove barras de rolagem */
+    width: 100vw;      
+    height: 100dvh;     
+    overflow: hidden;  
 }
 
 
@@ -23,7 +23,7 @@ h1 {
 }
 
 h2 {
-    font-size: 28px;
+    font-size: 50px;
     color: #1976d2;
     margin: 20px 0;
 }
@@ -82,7 +82,7 @@ h2 {
 }
 
 #life {
-    font-size: 24px;
+    font-size: 50px;
     color: red;
     margin-top: 20px;
 }
@@ -101,7 +101,7 @@ h2 {
     }
 
     h2 {
-        font-size: 22px;
+        font-size: 40px;
     }
 
     #imagem {
@@ -116,7 +116,7 @@ h2 {
     }
 
     #life {
-        font-size: 20px;
+        font-size: 40px;
     }
 
     #feedback {
