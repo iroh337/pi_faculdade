@@ -16,9 +16,9 @@ const perguntas = [
     { imagem: "/images/peixe.png", palavra: "Pe__e", opcoes: ["ix", "ch", "sh", "xe"], correta: 0 },
     { imagem: "/images/galinha.png", palavra: "Ga__nha", opcoes: ["li", "ni", "mi", "ti"], correta: 0 },
     { imagem: "/images/leao.png", palavra: "Le__", opcoes: ["al", "am", "au", "ao"], correta: 3 },
-    { imagem: "/images/jacare.png", palavra: "Ja__aré", opcoes: ["ga", "ca", "ce", "co"], correta: 1 },
+    { imagem: "/images/jacare.png", palavra: "Ja__ré", opcoes: ["ga", "ca", "ce", "co"], correta: 1 },
     { imagem: "/images/tartaruga.png", palavra: "Tarta__ga", opcoes: ["ru", "gu", "du", "fu"], correta: 0 },
-    { imagem: "/images/cobra.png", palavra: "Co__ra", opcoes: ["pr", "br", "dr", "gr"], correta: 1 },
+    { imagem: "/images/cobra.png", palavra: "Co__a", opcoes: ["pr", "br", "dr", "gr"], correta: 1 },
     { imagem: "/images/papagaio.png", palavra: "P__agaio", opcoes: ["op", "ap", "ep", "ip"], correta: 1 },
     { imagem: "/images/aranha.png", palavra: "Ar__ha", opcoes: ["al", "er", "in", "an"], correta: 3 },
     { imagem: "/images/pinguim.png", palavra: "Pin__im", opcoes: ["gu", "qu", "gi", "gi"], correta: 0 },
@@ -70,8 +70,11 @@ function verificarResposta(indice) { //funcao de verificacao de resposta
     
     }
     setTimeout(() => {// responsavel por esperar um segundo depois de apertar o botao para carregar a proxima pergunta
-        indiceAtual = (indiceAtual + 1) % perguntas.length;
-        carregarPergunta();
+        indiceAtual = (indiceAtual + 1) //% perguntas.length; // o (indiceAtual + 1) é responsável por passar para a próxima pergunta.
+        if(indiceAtual==27){
+            location.href = "./end.html"
+        }
+        carregarPergunta();           // o %pergunta.length e responsavel por reiniciar o jogo quando o array chegar ao fim.
         feedback.innerText = "";
     }, 1000); // assim possibilitando o usuario a ver o feedback
     
