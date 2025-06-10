@@ -70,7 +70,7 @@ function verificarResposta(indice) { //funcao de verificacao de resposta
     
     }
     setTimeout(() => {// responsavel por esperar um segundo depois de apertar o botao para carregar a proxima pergunta
-        indiceAtual = (indiceAtual + 1) //% perguntas.length; // o (indiceAtual + 1) é responsável por passar para a próxima pergunta.
+        indiceAtual = (indiceAtual + 1) // o (indiceAtual + 1) é responsável por passar para a próxima pergunta.
         if(indiceAtual==27){
             location.href = "./end.html"
         }
