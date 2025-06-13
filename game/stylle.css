@@ -10,7 +10,7 @@ html, body {
 
 
 body {
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* Mantém a fonte do código 1 */
+    font-family: 'Comic Sans MS', sans-serif; 
     background: linear-gradient(to top left, #ffd6e8, #d1f4ff);
     text-align: center;
 }
