@@ -28,6 +28,7 @@ let indiceAtual = 0;
 
 function carregarPergunta() {
     let p = perguntas[indiceAtual];
+    let showLevel = document.getElementById("show_level").innerHTML = `${indiceAtual+1}/27`;
     document.getElementById("conta").innerText = p.conta;
     document.querySelectorAll(".opcoes button").forEach((btn, i) => {
         btn.innerText = p.opcoes[i];

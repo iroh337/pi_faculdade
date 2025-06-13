@@ -29,10 +29,24 @@ const perguntas = [
 ];
 
 let c = 3; // contador de pontos de vida | a variavel "c" é a que define a pontuação de vida em 3 corações
+
+let indicesSorteados = Array.from({ length: perguntas.length }, (_, i) => i); //Cria um array com todos os números de 0 até perguntas.length - 1 (no caso 0 a 26).
+
+function embaralhar(array) { //funcao que embaralha o array
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
+indicesSorteados = embaralhar(indicesSorteados); //embaralha o array {0,1,2...26} criado anteriormente
+
 let indiceAtual = 0; // indiceAtual se refere a fase atual, o colocamos aqui para o caso de manutenções futuras
 
 function carregarPergunta() { // aqui é a função de carregar perguntas, que basicamente carrega as perguntas de cada fase
-    let p = perguntas[indiceAtual]; // foi criado a variavel "p" que recebe a pergunta da indice(fase) atual
+    let p = perguntas[indicesSorteados[indiceAtual]]; // foi criado a variavel "p" que recebe a pergunta da indice(fase) atual
+    let showLevel = document.getElementById("show_level").innerHTML = `${indiceAtual+1}/27`;
     document.getElementById("imagem").src = p.imagem; //busca o url da imagem que está no objeto "imagem" dentro do array "peruntas" acima.
     document.getElementById("palavra-incompleta").innerText = p.palavra; //busca a palavra incompleta no array acima e adiciona ao site.
     document.querySelectorAll(".opcoes button").forEach((btn, i) => {//cada opcao da fase atual se torna um botao e é adicionado ao site. 
@@ -41,7 +55,7 @@ function carregarPergunta() { // aqui é a função de carregar perguntas, que b
 }
 
 function verificarResposta(indice) { //funcao de verificacao de resposta
-    let correta = perguntas[indiceAtual].correta; //a variavel correta recebe a posicao que está no objeto "correta" dentro do array.
+    let correta = perguntas[indicesSorteados[indiceAtual]].correta; //a variavel correta recebe a posicao que está no objeto "correta" dentro do array.
     let feedback = document.getElementById("feedback");//a variavel feedback recebe a informação
     let vidas = document.getElementById("life"); //a variavel life é responsavel por mostrar e retirar os corações na tela caso a pessoa erre.
     
@@ -71,10 +85,10 @@ function verificarResposta(indice) { //funcao de verificacao de resposta
     }
     setTimeout(() => {// responsavel por esperar um segundo depois de apertar o botao para carregar a proxima pergunta
         indiceAtual = (indiceAtual + 1) // o (indiceAtual + 1) é responsável por passar para a próxima pergunta.
-        if(indiceAtual==27){
+        if(indiceAtual>=perguntas.length){ //checa se ja foram mostradas todas as fases
             location.href = "./end.html"
         }
-        carregarPergunta();           // o %pergunta.length e responsavel por reiniciar o jogo quando o array chegar ao fim.
+        carregarPergunta();           
         feedback.innerText = "";
     }, 1000); // assim possibilitando o usuario a ver o feedback
     
